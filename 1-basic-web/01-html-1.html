@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>标题</title>
+</head>
+
+<body>
+
+    <br />
+    <h4 id='02'> 这段话是第二章标题 </h4>
+    <p id='021'> 这段话是第二章内容 </p>
+
+    <h2>超链接</h2>
+    <a href='#02'>第二章</a>
+    <br />
+    <a href='#021'>第二章内容</a>
+    <br />
+
+    <a href=./1-html-02.html target="__blank"> <img src="images\MacType.ico" alt="这是图片的替换文字" title="鼠标放上后的提示语"
+            border=5px width="50px" height="50px" /> </a>
+    <br />
+
+    <h2>list</h2>
+    <ol type="I">
+        <li id="list1">第一条</li>
+        <li id="list2">第而条
+            <dl>
+                <dt>2.1</dt>
+                <dt>2.2</dt>
+                <dt>2.3</dt>
+            </dl>
+        </li>
+        <li id="list3">第三条</li>
+        <li id="list4">第一条</li>
+        <li id="list5">第一条</li>
+    </ol>
+
+    <h2>表格</h2>
+    <table border="2" width="500px" height="50px">
+        <!-- <tr></tr> 为一个行的数据 -->
+        <!-- <th> 表头标签-->
+        <tr align="center">
+            <th>name</th>
+            <th>age</th>
+            <th>score</th>
+        </tr>
+        <tr>
+            <td align="right">tom1</td>
+            <td align="center">11</td>
+            <td rowspan='2'>89</td>
+        </tr>
+        <tr>
+            <td align="right">tom2</td>
+            <td align="center">22</td>
+            <!-- <td>89</td> -->
+        </tr>
+    </table>
+
+    <h2>form</h2>
+    <form>
+        请输入反馈信息
+        </br>
+        <textarea rows='3' , cols='40'>请输入反馈信息</textarea>
+        <br>
+        user:
+        <input type="text">
+        <br>
+        pass:
+        <input type="password">
+        <input type="reset">
+        <input type="submit" value="big brother">
+    </form>
+
+</body>
+
+</html>
