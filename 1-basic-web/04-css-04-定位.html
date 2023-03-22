@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04-css-04-定位</title>
+    <style>
+        .head {
+            height: 300px;
+            width:  300px;
+            background-color: #555;
+        }
+        .body {
+            height: 300px;
+            width: 300px;
+            background-color: aqua;
+            position: relative;
+        }
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            z-index: 100;
+        }
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            position: absolute;
+            left: 80px;
+            top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="head"></div>
+    <div class="body">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+</html>
