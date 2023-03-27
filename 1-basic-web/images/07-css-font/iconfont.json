@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "778600",
+      "name": "home",
+      "font_class": "yooxi",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "1084694",
+      "name": "home",
+      "font_class": "home",
+      "unicode": "e65e",
+      "unicode_decimal": 58974
+    },
+    {
+      "icon_id": "10166323",
+      "name": "home",
+      "font_class": "home1",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "25972488",
+      "name": "home",
+      "font_class": "home2",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    }
+  ]
+}

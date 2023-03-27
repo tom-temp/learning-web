@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1212</title>
+    <style>
+        body{
+            background-color: #f5f5f5;
+        }
+        .box {
+            background-color: black;
+            width: 100px;
+            height: 100px;
+        }
+        /* 手机屏幕 */
+        @media screen and (max-width: 768px) {
+            .box {
+                background-color: green;
+            }
+            .p1 {
+                display: none;
+            }
+        }
+        @media screen and (min-width: 768px) and (max-width: 996px) {
+            .box {
+                background-color: red;
+            }
+        }
+        /* 雪碧图 */
+        .icon1 {
+            display: block;
+            border: 1px solid red;
+            width: 60px;
+            height: 80px;
+            background-image: url(images/07-css-01.png);
+            background-position: -18px -7px;
+        }
+        .icon2{
+            display: block;
+            border: 1px solid red;
+            width: 60px;
+            height: 80px;
+            background-image: url(images/07-css-01.png);
+            background-position: -18px -97px;
+        }
+        /* 从iconfont.cn购物车中下载字体包后, 再次更改属性 */
+        h2+.home-icon {
+            font-size: 50px;
+            color: blueviolet;
+        }
+    </style>
+    <!-- 从iconfont.cn购物车中下载字体包 -->
+    <link rel="stylesheet" href="images/07-css-font/iconfont.css">
+</head>
+<body>
+    <h2>媒体查询</h2>
+    <div class="box"></div>
+    <p class="p1">pc端</p>
+    <h2>雪碧图</h2>
+    <span class="icon1"></span>
+    <span class="icon2"></span>
+    <h2>从iconfont.cn购物车中下载字体包</h2>
+    <span class="iconfont icon-yooxi home-icon"></span>
+</body>
+</html>
