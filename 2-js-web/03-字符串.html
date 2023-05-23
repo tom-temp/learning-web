@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串</title>
+    <script>
+        document.write("<h1>" + "字符串" + "</h1>")
+        var strtest = "abcdefg";
+        // 长度
+        document.write(strtest.length + "<br>");
+        // 确定位置
+        document.write(strtest.charAt(1));
+
+        //concat
+        document.write(strtest.concat(strtest, "hi", 100), "<br>");
+        document.write(strtest+strtest, "<br>")
+        document.write(strtest.substring(1,3));
+        document.write("<br>");
+        document.write(strtest.substr(3,2));
+        document.write("<br>");
+        document.write(strtest.substr(-3,4));
+
+        document.write("<br>");
+        list_ex = ['a','b','v','sd']
+        for (var i in list_ex){
+            document.write(list_ex[i], "<br>")
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
