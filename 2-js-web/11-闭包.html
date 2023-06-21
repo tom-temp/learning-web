@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>闭包</title>
+</head>
+<body>
+    <button id="btn">+1</button>
+    <script>
+        btn_1 = document.getElementById("btn")
+
+        function close_test() {
+            i = 0
+            console.log("进入了闭包函数")
+            function funinside() {
+                i++
+                console.log(`第${i}次点击按钮`)
+            }
+            return funinside
+        }
+        btn_1.onclick = close_test()
+    </script>
+</body>
+</html>

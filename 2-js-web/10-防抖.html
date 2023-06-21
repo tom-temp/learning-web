@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #test {
+            height: 200px;
+            width: 100px;
+            background-color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div id="test">12312</div>
+    <div id="test">12312</div>
+    <div id="test">12312</div>
+    <div id="test">12312</div>
+    <div id="test">12312</div>
+    <div id="test">12312</div>
+    <div id="test">12312</div>
+    <script>
+
+
+        function debounce(fn,delay){
+            let timer = null //借助闭包, 此次为初始变量, 在函数中相当于全局变量, 但不会被其他函数调用
+            function funcinside() {
+                if(timer){
+                    clearTimeout(timer)
+                    console.log("取消了计时器")
+                }
+                timer = setTimeout(fn,delay) // 简化写法
+            }
+            return funcinside
+        }
+        function throttle(fn,delay){
+            let check_timer = false
+            function funcinside() {
+                if(check_timer == true){
+                    console.log("已经有计时器了,不再添加")
+                }
+                else {
+                    timer = setTimeout(function(){
+                        fn();
+                        check_timer = false
+                    },delay)
+                    check_timer = true
+                }
+            }
+            return funcinside
+        }
+
+        function scolldoing(){
+            var distance_to_top = document.documentElement.scrollTop
+            console.log("滚动距离上边距" + distance_to_top)
+        }
+        window.onscroll = throttle(scolldoing, 3000)
+    </script>
+</body>
+</html>

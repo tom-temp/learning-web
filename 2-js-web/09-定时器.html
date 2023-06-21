@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="cleatime">123</button>
+    <script>
+        var clear_time = document.getElementById("cleatime")
+        clear_time.onclick = function() {
+            clearTimeout(timeOutTo);
+        }
+        var timeOutOn = setTimeout(function(){console.log("123")}, 4000)
+        var timeOutTo = setTimeout(function(){console.log("124")}, 4000)
+        //定时器处于函数中不会执行
+        var timeOutTh =  function () {
+            setTimeout(console.log("125"),2000);
+        }
+        // 正常定时器
+        setTimeout(function(){
+            console.log("定时器")
+        },1000)
+
+        // 定时器中this并不表示改变量, 而是显示全局变量
+        var name = "sxt";
+        var user = {
+            name: "itbaizhan",
+            getName: function () {
+                setTimeout(function(){
+                    console.log(this.name);
+                },1000)
+            }
+        };
+
+    </script>
+</body>
+</html>

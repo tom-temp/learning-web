@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #reset {
+
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <form id="myform" onsubmit="submit">
+        <div>显示一下</div>
+        <input type="text" id="user" name="user" value="请输入用户名">
+        <a id="reset">reset</a>
+        <a id="submit">submit</a>
+        <button>adsf</button>
+    </form>
+    <hr>
+    <button id="test">test</button>
+    <script>
+        myForm = document.getElementById("myform")
+        btn_reset = document.getElementById("reset")
+        btn_submit = document.getElementById("submit")
+        input_name = document.getElementsByName("user")[0]
+
+        btn_reset.onclick = function(e) {
+            console.log(e.target.id)
+            input_name.value = "请输入用户名"
+            // myForm.reset()
+            // console.log(input_name.value)
+            // console.log("test")
+        }
+        input_name.onclick = function(e) {
+            if (input_name.value == "请输入用户名") {
+                input_name.value = ""
+            }
+        }
+
+        btn_submit.addEventListener("click", submit)
+        function submit() {
+            myForm.submit()
+        }
+
+
+        // test
+        console.log("123")
+        var btntest = document.getElementById("test")
+        // console.log(btntest)
+        btntest.onclick = function() {
+            console.log("1212");
+        }
+    </script>
+</body>
+</html>

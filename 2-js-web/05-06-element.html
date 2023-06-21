@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ok</title>
+
+</head>
+<body>
+    <div class=oks>class=oks1</div>
+    <div class=oks>class=oks2</div>
+    <hr>
+    <div class="show">显示结果01</div>
+    <hr>
+    <div class="show2">显示结果02</div>
+    <hr>
+    <script>
+        // 搜索
+        oksdiv = document.getElementsByClassName("oks")
+        console.log(oksdiv)
+
+
+
+        // 创建元素
+        oksdiv3 = document.createElement("div")
+        // 创建元素class
+        class_for_oks = document.createAttribute('class');
+        class_for_oks.value = "oks"
+        oksdiv3.setAttributeNode(class_for_oks)
+        //创建元素内容 或者使用 `document.createTextNode()`+`appendChild`方法在后面增加
+        oksdiv3.innerHTML = "这是oksdiv3"
+        console.log(oksdiv3)
+        // 显示元素方法1
+        show_Elec = document.querySelector(".show")
+        console.log(show_Elec)
+        show_Elec.appendChild(oksdiv3)
+        console.log(show_Elec)
+        // 显示元素方法2
+        // 不能使用`show_Elec2.innerHTML = oksdiv3`直接修改元素
+        show_Elec2 = document.querySelector(".show2")
+        show_Elec2.innerHTML = oksdiv3
+        console.log(oksdiv3.innerHTML)
+
+        // 我现在又想在oksdiv3后面增加点东西
+        text_oksdiv3 = document.createTextNode(", oksdiv3后续内容")
+        oksdiv3.appendChild(text_oksdiv3)
+        oksdiv3.appendChild(text_oksdiv3) //增加第二次不能改变
+        console.log(oksdiv3)
+        text_oksdiv3_2 = text_oksdiv3
+        oksdiv3.appendChild(text_oksdiv3_2) // 这样也不行
+
+
+
+        // 增加".show"的标签,看下能否找到
+        // show_Elec.classList = "show oks"
+        show_Elec.classList.toggle("oks")
+
+        document.write("<h1>" + "结束" + "</h1>")
+    </script>
+</body>
+</html>
