@@ -75,6 +75,7 @@
 		text-indent: 2em;
 
 		<!-- 此选项由"上间距+文字高度+下间距"三者构成 -->
+		/* 与hight一致时,文字上下剧中 */
 		line-height: 26px;
 	}
 </style>

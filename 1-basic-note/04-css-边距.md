@@ -70,6 +70,8 @@ border-collapse: collapse;
 		align-items: flex-start | flex-end | center
 		height: 500px
 		width:  500px
+		line-height: 500px;
+		/* 设置line-height=hight, 使字体上下剧中 */
 	}
 
 	.inflex1; .inflex2 {
